@@ -7,9 +7,15 @@ Scope {
     PanelWindow {
         id: window
 
-        mask: Region {}
+        mask: Region {
+            x: 100
+            width: 100
+            height: 100
+        }
 
         color: "transparent"
+
+        exclusionMode: ExclusionMode.Ignore
 
         anchors {
             top: true
