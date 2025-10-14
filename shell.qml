@@ -1,6 +1,10 @@
 import Quickshell
 import QtQuick
 
+import "components"
+import "top_bar"
+import "side_bar"
+
 Scope {
     id: root
 

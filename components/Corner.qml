@@ -2,6 +2,8 @@ import QtQuick
 import QtQuick.Shapes
 import Quickshell
 
+import "root:/"
+
 Item {
     id: root
     property string corner: "top_right" // either top_left top_right bottom_right or bottom_left
