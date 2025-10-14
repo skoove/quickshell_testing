@@ -24,24 +24,44 @@ Scope {
             right: true
         }
 
-        TopBar { id: topBar }
-        SideBar { id: sideBar }
+        TopBar {
+            id: topBar
 
-        Item {
+            anchors {
+                top: parent.top
+                left: parent.left
+                right: logoCorner.left
+            }
+        }
+
+        SideBar {
+            id: sideBar
+
+            anchors {
+                top: logoCorner.bottom
+                bottom: parent.bottom
+                right: parent.right
+            }
+        }
+
+        Rectangle {
             id: logoCorner
+
+            color: Theme.base00
 
             anchors {
                 top: parent.top
                 right: parent.right
             }
 
-            implicitHeight: 40
-            implicitWidth: implicitHeight
+            implicitHeight: topBar.height
+            implicitWidth: sideBar.width
 
             Image {
-                anchors.fill: parent
-                anchors.margins: 3
+                anchors.centerIn: parent
                 source: "./gruvbox-dark-rainbow-square.svg"
+                height: parent.height - 3
+                width: height
             }
         }
 

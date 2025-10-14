@@ -4,12 +4,6 @@ import QtQuick
 Rectangle {
     id: bar
     
-    anchors {
-        top: parent.top
-        bottom: parent.bottom
-        right: parent.right
-    }
-
     color: Theme.base00
 
     implicitWidth: 35
